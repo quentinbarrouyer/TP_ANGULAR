@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Tasks } from './types/task';
 
 @Component({
     // Ce composant sera affiché par Angular à chaque fois
@@ -22,11 +23,6 @@ import { Component, Input } from "@angular/core";
     `
 })
 export class TodoListComponent {
-    // Le décorateur Input permet de spécifier à Angular
-    // que cette donnée tasks pourra être renseignée depuis
-    // l'extérieur du composant. Par défaut, le tableau sera vide
-    // mais il prendra la valeur qu'on lui donne depuis l'extérieur
-    // si c'est le cas
     @Input()
-    tasks = [{ id: 0, text: "", done: false }]; 
+    tasks: Tasks = []; 
 }
