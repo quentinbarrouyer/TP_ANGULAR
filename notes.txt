@@ -1,0 +1,7 @@
+installation
+npm install -g @angular/cli
+ng new todoapp --skip-tests --inline-style --inline-template --routing false --style css
+
+lancement
+cd todoapp/
+ng serve
