@@ -28,5 +28,5 @@ export class TodoListComponent {
     // mais il prendra la valeur qu'on lui donne depuis l'extérieur
     // si c'est le cas
     @Input()
-    tasks = []; 
+    tasks = [{ id: 0, text: "", done: false }]; 
 }
