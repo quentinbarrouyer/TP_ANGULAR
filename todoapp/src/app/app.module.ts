@@ -10,6 +10,8 @@ import { TodoListComponent } from './todo-list.component';
 
 import { HttpClientModule } from "@angular/common/http";
 
+import { TasksService } from './api/tasks.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { HttpClientModule } from "@angular/common/http";
     // des requêtes HTTP :
     HttpClientModule
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
