@@ -68,4 +68,17 @@ export class TasksService {
             }
         });
     }
+    
+    /**
+     * Récupère les tâches dont l'identifiant correspond
+     */
+    findOne(id: number): Observable<Tasks> {
+        return this.http.get<Tasks>(SUPABASE_URL + '?id=eq.' + id, {
+            headers: {
+                "Content-Type": "application/json",
+                apiKey: SUPABASE_API_KEY,
+                Prefer: "return=representation"
+            }
+        });
+    }
 }

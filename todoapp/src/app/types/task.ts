@@ -1,5 +1,5 @@
 // Représentons une tâche par tout objet qui aurait :
-type Task = {
+export type Task = {
     // Une propriété id numérique
     id: number;
     // Une propriété text de type string
