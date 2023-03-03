@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { TaskFormComponent } from './task-form.component';
 import { TodoListComponent } from './todo-list.component';
 
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,12 @@ import { TodoListComponent } from './todo-list.component';
     // En important le ReactiveFormsModule, on importe des
     // composants, directives et services qu'il met à notre 
     // disposition !
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // En important le HttpClientModule, on rend disponible dans notre 
+    // application un service crucial, une instance de la classe HttpClient
+    // On pourra utiliser cet objet dans nos composants pour effectuer
+    // des requêtes HTTP :
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
